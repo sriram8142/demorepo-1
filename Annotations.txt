@@ -1,0 +1,113 @@
+---
+1.What is the use of @Autowired annotation?
+It helps to get better control and understanding of how and where autowiring should be achieved.
+It can be used to the autowire bean on any setter method, property or constructor.
+---
+2.What is the use of @Qualifier annotation?
+---
+It is mainly used when the developer is bound to create many beans of the same type and want to 
+wire only one of them with the property, in this scenario @Qualifier with @Autowired is used for 
+removing confusion and specifying the exact bean to be wired.
+---
+3.@RequestMapping
+---
+.This annotation is used to provide the routing information and tells to Spring that any HTTP 
+request must be mapped to the respective method.
+.To use this annotation, you have to import org.springframework.web.
+.bind.annotation.RequestMapping;
+---
+4.@RestController
+---
+.This annotation is used to add the @ResponseBody and @Controller annotation to the class
+.To use this annotation, you have to import org.springframework.web.
+.bind.annotation.RestController;
+---
+5.@SpringBootApplication
+---
+.Used in the main class or bootstrap class
+.It is a combination of @Configuration, @ComponentScan and @EnableAutoConfiguration annotations.
+---
+6.@EnableAutoConfiguration
+---
+.Used to enable auto-configuration  and component scanning in your project
+.It is a combination of @Configuration and @ComponentScan annotations
+---
+7.What is the difference between RequestMapping and GetMapping?
+---
+The @GetMapping is a composed annotation that acts as a shortcut for 
+@RequestMapping(method = RequestMethod.GET). Both these methods support the consumes. 
+The consume options are :
+consumes = “text/plain”
+consumes = {“text/plain”, “application/*”}
+---
+8. Mention the differences between WAR and embedded containers
+---
+.WAR benefits a considerable measure from Spring Boot
+.Only one component of Spring Boot and is utilized during improvements
+---
+9.@Controller
+---
+It denotes that particular class that behaves like a controller.
+---
+10. What do you mean by Spring Batch?
+---
+Spring batch is also a lightweight framework that is created to support the development of robust batch 
+applications for the enterprise system.
+Spring batch improves the productivity, approach for development, and makes certain features that the 
+users have learned in Spring to be much easier.
+---
+USE
+---
+Spring batch is mainly used to read & write files, and also in performing certain operations in the 
+database like reading or writing,datatransformation,report creation,also import and export data,etc. 
+---
+11.Explain Spring batch Architecture.
+---
+Spring batch architecture mainly comprises three component layers i.e. an application, core, and 
+infrastructure.
+An application consists of script and batch jobs created by the developers through the spring batch. 
+The core contains all the important and necessary classes that are required for launching and 
+controlling a batch job. Lastly, infrastructure handles both application and core including services, 
+readers, writers, etc
+---
+12.Explain the working principle of Spring Batch.
+---
+Spring batch mainly works on four steps as mentioned below:
+1.Firstly, step-it guides the job to do its respective work.
+2.It has an itemReader interface to provide the data.
+3.It has the itemProcessor interface for a transformation of data.
+4.Lastly, it has an itemStreamWriter interface to generate the desired result.
+---
+13.Explain Tasklet in Spring Batch.
+---
+Tasklet is an interface, which is often called to perform one task only like clean up, or 
+deletion or setting up of resources during execution time.
+---
+14.Explain the Spring MVC framework.
+---
+MVC stands for Model, View, and Controller. 
+Sp MVC framework is used to develop web applications with good architecture flow and configurations. 
+It is highly flexible in integration with the other frameworks.
+The @Controller and @RequestMapping are the two main annotations that are used in Spring MVC flow.
+The flow of the Spring Architecture goes in the following way:
+1.The request is received by the dispatcher servlet.
+2.Dispatcher servlet sends the request to the handler mapping which provides the response in terms of 
+  controller class name.
+3.Now the request is sent to the Controller from the dispatcher servlet, hence the controller processes 
+  the request and returns the model view object as a response to the dispatcher servlet.
+4.Again, the dispatcher servlet sends the request to view resolver to get the correct view page.
+5.Lastly, the dispatcher servlet sends the model object received to the browser page to display the 
+result.
+---
+15.) What is Transaction Management in Spring? Explain the different types of Transaction Management.
+---
+Transaction is basically some operation performed on some data in the database. 
+Transaction Management comes under the Relational Database management system and is used to ensure data 
+ethics and consistency.
+The core advantage of Transaction Management is that it supports declarative and programmatic 
+Transaction Management and APIs like Hibernate, JTA, and JDBC by correct integration.
+
+There are two types of Transaction Management, which are mentioned below:
+1.Programmatic Transaction Management is used to help the transaction in terms of coding or scripting.
+2.Declarative Transaction Management is used to isolate business code and transactions.
+///Declarative Transaction Management is widely used by developers.
